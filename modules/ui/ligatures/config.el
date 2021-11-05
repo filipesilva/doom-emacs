@@ -151,7 +151,8 @@ and cannot run in."
       (when in-mode-extras-p
         (prependq! prettify-symbols-alist
                    (alist-get major-mode +ligatures-extra-alist)))
-      (when (and (or in-mode-p in-mode-extras-p)
+      (when (and in-mode-p 
+                 in-mode-extras-p
                  prettify-symbols-alist)
         (when prettify-symbols-mode
           (prettify-symbols-mode -1))
